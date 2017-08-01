@@ -1,7 +1,6 @@
 package com.waracle.cakemgr.model;
 
 import java.io.Serializable;
-import java.sql.Blob;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -23,8 +22,8 @@ public class Cake implements Serializable {
 	@Column(name = "description", unique = false, nullable = false, length = 100)
 	private String description;
 
-	@Column(name = "image", unique = false, nullable = true)
-	private Blob image;
+	@Column(name = "image", unique = false, nullable = false, length = 300)
+	private String image;
 
 	public String getTitle() {
 		return title;
@@ -42,11 +41,11 @@ public class Cake implements Serializable {
 		this.description = description;
 	}
 
-	public Blob getImage() {
+	public String getImage() {
 		return image;
 	}
 
-	public void setImage(Blob image) {
+	public void setImage(String image) {
 		this.image = image;
 	}
 

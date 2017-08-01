@@ -52,7 +52,7 @@ public class CakeManagerApplicationTests {
 		cake.setTitle("Marble Cake");
 		cake.setDescription(
 				"A cake with marble like appearance achieved by very lightly blending light and dark batter");
-		cake.setImage(null);
+		cake.setImage("http://img.taste.com.au/L1NLVIPb/taste/2016/11/coffee-walnut-cake-88106-1.jpeg");
 		return cake;
 	}
 

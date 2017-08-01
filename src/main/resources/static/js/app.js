@@ -4,7 +4,7 @@ app.controller('CakeCRUDCtrl', ['$scope','CakeCRUDService', function ($scope,Cak
 	  
     $scope.addCake = function () {
         if ($scope.cake != null && $scope.cake.title) {
-            CakeCRUDService.addCake($scope.cake.title, $scope.cake.description)
+            CakeCRUDService.addCake($scope.cake.title, $scope.cake.description, $scope.cake.image)
               .then (function success(response){
                   $scope.message = 'Cake added!';
                   $scope.errorMessage = '';

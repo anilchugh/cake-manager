@@ -24,9 +24,13 @@ a {
 					<td width="100">Description:</td>
 					<td><input type="text" id="description" ng-model="cake.description" /></td>
 				</tr>
+				<tr>
+					<td width="100">Image:</td>
+					<td><input type="text" id="image" ng-model="cake.image" /></td>
+				</tr>
 			</table>
 			<br /> <br /> 
-			<button ng-click="addCake(cake.title,cake.description)">Add Cake</button> 
+			<button ng-click="addCake(cake.title,cake.description,cake.image)">Add Cake</button> 
 
 		<br /> <br />
 		<p style="color: green">{{message}}</p>
