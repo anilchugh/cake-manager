@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+<meta charset="ISO-8859-1"/>
+<title>User CRUD</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script src="js/app.js"></script>
+<style>
+a {
+	cursor: pointer;
+	background-color: lightblue;
+}
+</style>
+</head>
+<body>
+	<div ng-controller="CakeCRUDCtrl">
+			<table>
+				<tr>
+					<td width="100">Title:</td>
+					<td><input type="text" id="title" ng-model="cake.title" /></td>
+				</tr>
+				<tr>
+					<td width="100">Description:</td>
+					<td><input type="text" id="description" ng-model="cake.description" /></td>
+				</tr>
+			</table>
+			<br /> <br /> 
+			<a ng-click="addCake(cake.title,cake.description)">Add Cake</a> 
+
+		<br /> <br />
+		<p style="color: green">{{message}}</p>
+		<p style="color: red">{{errorMessage}}</p>
+
+		<br />
+		<br /> 
+		<a ng-click="getAllCakes()">List all cakes</a><br /> 
+		<br /> <br />
+		<div>
+		<table>
+			<th>Title</th><th>Description</th>		
+  			<tr ng-repeat="cake in cakes">
+    			<td>{{ cake.title }}</td>
+    			<td>{{ cake.description }}</td>
+  			</tr>
+		</table>
+		</div>
+	</div>
+</body>
+</html>
