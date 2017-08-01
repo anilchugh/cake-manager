@@ -14,7 +14,7 @@ a {
 </style>
 </head>
 <body>
-	<div ng-controller="CakeCRUDCtrl">
+	<div ng-controller="CakeCRUDCtrl" ng-init="getAllCakes()">
 			<table>
 				<tr>
 					<td width="100">Title:</td>
@@ -26,7 +26,7 @@ a {
 				</tr>
 			</table>
 			<br /> <br /> 
-			<a ng-click="addCake(cake.title,cake.description)">Add Cake</a> 
+			<button ng-click="addCake(cake.title,cake.description)">Add Cake</button> 
 
 		<br /> <br />
 		<p style="color: green">{{message}}</p>
@@ -34,14 +34,15 @@ a {
 
 		<br />
 		<br /> 
-		<a ng-click="getAllCakes()">List all cakes</a><br /> 
+		<button ng-click="getAllCakes()">List all cakes</button><br /> 
 		<br /> <br />
 		<div>
 		<table>
-			<th>Title</th><th>Description</th>		
+			<th>Title</th><th>Description</th><th>Image</th>		
   			<tr ng-repeat="cake in cakes">
     			<td>{{ cake.title }}</td>
     			<td>{{ cake.description }}</td>
+    			<td>{{ cake.image }}</td>
   			</tr>
 		</table>
 		</div>
